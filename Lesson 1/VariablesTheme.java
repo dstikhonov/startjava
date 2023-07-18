@@ -45,21 +45,21 @@ public class VariablesTheme {
         int intMax = Integer.MAX_VALUE;
         long longMax = Long.MAX_VALUE;
 
-        System.out.println("byte. Первоначальное значение: " + byteMax++);
-        System.out.println("byte. Инкремент: " + byteMax--);
-        System.out.println("byte. Декремент: " + byteMax);
+        System.out.println("byte. Первоначальное значение: " + byteMax);
+        System.out.println("byte. Инкремент: " + ++byteMax);
+        System.out.println("byte. Декремент: " + --byteMax);
 
-        System.out.println("short. Первоначальное значение: " + shortMax++);
-        System.out.println("short. Инкремент: " + shortMax--);
-        System.out.println("short. Декремент: " + shortMax);
+        System.out.println("short. Первоначальное значение: " + shortMax);
+        System.out.println("short. Инкремент: " + ++shortMax);
+        System.out.println("short. Декремент: " + --shortMax);
 
-        System.out.println("int. Первоначальное значение: " + intMax++);
-        System.out.println("int. Инкремент: " + intMax--);
-        System.out.println("int. Декремент: " + intMax);
+        System.out.println("int. Первоначальное значение: " + intMax);
+        System.out.println("int. Инкремент: " + ++intMax);
+        System.out.println("int. Декремент: " + --intMax);
 
-        System.out.println("long. Первоначальное значение: " + longMax++);
-        System.out.println("long. Инкремент: " + longMax--);
-        System.out.println("long. Декремент: " + longMax);
+        System.out.println("long. Первоначальное значение: " + longMax);
+        System.out.println("long. Инкремент: " + ++longMax);
+        System.out.println("long. Декремент: " + --longMax);
 
         System.out.println("\n5. Перестановка значений переменных");
         int num1 = 2;
