@@ -63,9 +63,9 @@ public class VariablesTheme {
 
         System.out.println("\n5. Перестановка значений переменных");
         int num1 = 2;
-        int num2 = 5;
         int tmp = num1;
-
+        int num2 = 5;
+        
         System.out.println("С помощью третьей переменной:\n" + "Исходные значения переменных: num1 = " + num1 + ", num2 = " + num2);
         num1 = num2;
         num2 = tmp;
