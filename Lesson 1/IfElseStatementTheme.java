@@ -45,18 +45,23 @@ public class IfElseStatementTheme {
         }
 
         System.out.println("\n3. Проверка числа");
-        num = 0;
+        num = -2;
 
         if (num == 0) {
-            System.out.println("Число " + num + " является нулем");
-        } else if (num % 2 == 0 && num < 0) {
-            System.out.println("Число " + num + " является отрицательным и четным");
-        } else if (num % 2 != 0 && num < 0) {
-            System.out.println("Число " + num + " является отрицательным и нечетным");
-        } else if (num % 2 == 0 && num > 0) {
-            System.out.println("Число " + num + " является положительным и четным");
-        } else if (num % 2 != 0 && num > 0) {
-            System.out.println("Число " + num + " является положительным и нечетным");
+        } else {
+            if (num % 2 == 0) {
+                if (num > 0) {
+                    System.out.println("Число " + num + " является положительным и четным");
+                } else {
+                    System.out.println("Число " + num + " является отрицательным и четным");
+                }
+            } else {
+                if (num > 0) {
+                    System.out.println("Число " + num + " является положительным и нечетным");
+                } else {
+                    System.out.println("Число " + num + " является отрицательным и нечетным");
+                }
+            }
         }
 
         System.out.println("\n4. Поиск одинаковых цифр в числах");
@@ -71,23 +76,23 @@ public class IfElseStatementTheme {
         int tensNum1 = (num1 / 10) % 10;
         int onesNum1 = num1 % 10;
 
-        boolean hasSameDigit = false;
+        boolean areDigitEqual = false;
 
         System.out.println("Исходные числа: " + num + ", " + num1);
         if (onesNum == onesNum1) {
             System.out.println("В первом разряде (единицы) одинаковая цифра " + onesNum);
-            hasSameDigit = true;
+            areDigitEqual = true;
         }
         if (tensNum == tensNum1) {
             System.out.println("Во втором разряде (десятки) одинаковая цифра " + tensNum);
-            hasSameDigit = true;
+            areDigitEqual = true;
         }
         if (hundredsNum == hundredsNum1) {
             System.out.println("В третьем разряде (сотни) одинаковая цифра " + hundredsNum);
-             hasSameDigit = true;
+             areDigitEqual = true;
         }
 
-        if (!hasSameDigit) {
+        if (!areDigitEqual) {
             System.out.println("Равных чисел нет");
         }
 
@@ -110,10 +115,8 @@ public class IfElseStatementTheme {
 
         if (depositAmount < 100_000) {
             interestRate = 5;
-        } else if (depositAmount < 300_000) {
+        } else if (depositAmount <= 300_000) {
             interestRate = 7;
-        } else {
-            interestRate = 10;
         }
 
         int interestTotal = depositAmount * interestRate / 100;
@@ -124,34 +127,32 @@ public class IfElseStatementTheme {
         System.out.println("Итоговая сумма с %: " + totalAmount + " руб.");
 
         System.out.println("\n7. Определение оценки по предметам");
-        int HistoryPercent = 59;
-        int ProgrammingPercent = 92;
-
+        int historyPercent = 59;
         int historyScore;
-        int programmingScore;
-
-        if (HistoryPercent <= 60) {
+        if (historyPercent <= 60) {
             historyScore = 2;
-        } else if (HistoryPercent <= 73) {
+        } else if (historyPercent <= 73) {
             historyScore = 3;
-        } else if (HistoryPercent <= 91) {
+        } else if (historyPercent <= 91) {
             historyScore = 4;
         } else {
             historyScore = 5;
         }
 
-        if (ProgrammingPercent <= 60) {
+        int programmingPercent = 92;
+        int programmingScore;
+        if (programmingPercent <= 60) {
             programmingScore = 2;
-        } else if (ProgrammingPercent <= 73) {
+        } else if (programmingPercent <= 73) {
             programmingScore = 3;
-        } else if (ProgrammingPercent <= 91) {
+        } else if (programmingPercent <= 91) {
             programmingScore = 4;
         } else {
             programmingScore = 5;
         }
 
         double avgGrade = (double) (historyScore + programmingScore) / 2;
-        int avgPercent = (HistoryPercent + ProgrammingPercent) / 2;
+        int avgPercent = (historyPercent + programmingPercent) / 2;
 
         System.out.println("Оценка по истории - " + historyScore + "\nОценка по программированию - " + programmingScore);
         System.out.println("Средний балл оценок по предметам - " + avgGrade);
