@@ -45,23 +45,21 @@ public class IfElseStatementTheme {
         }
 
         System.out.println("\n3. Проверка числа");
-        num = -2;
+        num = 2;
 
-        if (num == 0) {
-        } else {
-            if (num % 2 == 0) {
-                if (num > 0) {
-                    System.out.println("Число " + num + " является положительным и четным");
-                } else {
-                    System.out.println("Число " + num + " является отрицательным и четным");
-                }
+        if (num != 0) {
+            if (num > 0) {
+                System.out.print("Число " + num + " является положительным и ");
             } else {
-                if (num > 0) {
-                    System.out.println("Число " + num + " является положительным и нечетным");
-                } else {
-                    System.out.println("Число " + num + " является отрицательным и нечетным");
-                }
+                System.out.print("Число " + num + " является отрицательным и ");
             }
+            if (num % 2 == 0) {
+                System.out.println("четным");
+            } else {
+                System.out.println("нечетным");
+            }
+        } else {
+            System.out.println("Число является нулем");
         }
 
         System.out.println("\n4. Поиск одинаковых цифр в числах");
@@ -76,23 +74,23 @@ public class IfElseStatementTheme {
         int tensNum1 = (num1 / 10) % 10;
         int onesNum1 = num1 % 10;
 
-        boolean areDigitEqual = false;
+        boolean isEqual = false;
 
         System.out.println("Исходные числа: " + num + ", " + num1);
         if (onesNum == onesNum1) {
             System.out.println("В первом разряде (единицы) одинаковая цифра " + onesNum);
-            areDigitEqual = true;
+            isEqual = true;
         }
         if (tensNum == tensNum1) {
             System.out.println("Во втором разряде (десятки) одинаковая цифра " + tensNum);
-            areDigitEqual = true;
+            isEqual = true;
         }
         if (hundredsNum == hundredsNum1) {
             System.out.println("В третьем разряде (сотни) одинаковая цифра " + hundredsNum);
-             areDigitEqual = true;
+             isEqual = true;
         }
 
-        if (!areDigitEqual) {
+        if (!isEqual) {
             System.out.println("Равных чисел нет");
         }
 
@@ -128,27 +126,23 @@ public class IfElseStatementTheme {
 
         System.out.println("\n7. Определение оценки по предметам");
         int historyPercent = 59;
-        int historyScore;
+        int historyScore = 5;
         if (historyPercent <= 60) {
             historyScore = 2;
         } else if (historyPercent <= 73) {
             historyScore = 3;
         } else if (historyPercent <= 91) {
             historyScore = 4;
-        } else {
-            historyScore = 5;
         }
 
         int programmingPercent = 92;
-        int programmingScore;
+        int programmingScore = 5;
         if (programmingPercent <= 60) {
             programmingScore = 2;
         } else if (programmingPercent <= 73) {
             programmingScore = 3;
         } else if (programmingPercent <= 91) {
             programmingScore = 4;
-        } else {
-            programmingScore = 5;
         }
 
         double avgGrade = (double) (historyScore + programmingScore) / 2;
